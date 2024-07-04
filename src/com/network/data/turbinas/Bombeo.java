@@ -1,14 +1,25 @@
 package com.network.data.turbinas;
 
+
 import com.network.enums.Estado;
 
 public abstract class Bombeo {
+    protected String id;
     protected Estado estado;
     protected String regimen;
     
-    public Bombeo(Estado estado, String regimen) {
+    public Bombeo(String id, Estado estado, String regimen) {
+        this.id = id;
         this.estado = estado;
         this.regimen = regimen;
+    }
+
+    public String getId(){
+        return id;
+    }
+
+    public void setId(String id){
+        this.id = id;
     }
 
     public Estado getEstado() {

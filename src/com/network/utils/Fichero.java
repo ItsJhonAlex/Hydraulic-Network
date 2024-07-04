@@ -9,7 +9,7 @@ import java.util.List;
 import com.network.service.Network;
 
 public class Fichero {
-    public static void guardarInformacionEnArchivo(Network network, String nombreArchivo) {
+    public static void guardarInformacionEstado(Network network, String nombreArchivo) {
         // Crear un archivo para guardar la información
         try (PrintWriter out = new PrintWriter(new FileWriter(nombreArchivo))) {
             // Guardar la salida original de la consola
@@ -18,7 +18,7 @@ public class Fichero {
             System.setOut(new PrintStream(new FileOutputStream(nombreArchivo)));
             
             // Llamar al método que imprime la información
-            network.mostrarInformacionDepositos();
+            network.informaciónEstado();
             
             // Restaurar la salida estándar a la consola
             System.setOut(originalOut);

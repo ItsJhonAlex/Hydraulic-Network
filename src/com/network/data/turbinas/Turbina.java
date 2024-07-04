@@ -6,8 +6,8 @@ import com.network.interfaces.MostrarInformacion;
 public class Turbina extends Bombeo implements MostrarInformacion{
     private double fuerza;
 
-    public Turbina(Estado estado, String regimen, double fuerza) {
-        super(estado, regimen);
+    public Turbina(String id, Estado estado, String regimen, double fuerza) {
+        super(id, estado, regimen);
         this.fuerza = fuerza;
     }
 
@@ -21,7 +21,7 @@ public class Turbina extends Bombeo implements MostrarInformacion{
 
     @Override
     public String mostrarInformacion() {
-        return "Turbina: " + "\nEstado: " + fuerza + "\nRegimen: " + regimen + "\nFuerza: " + fuerza;
+        return "Turbina: " + "\nID: " + id + "\nEstado: " + fuerza + "\nRegimen: " + regimen + "\nFuerza: " + fuerza + "kPa\n";
     }
 }
 

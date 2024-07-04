@@ -10,7 +10,7 @@ public class Cisterna extends Deposito implements MostrarInformacion {
     private Integer compartiminetos;
     private Forma forma;
     
-    public Cisterna(Integer id, Integer capacidad, Estado estado, String abasto, Clasificacion clasificacion,
+    public Cisterna(String id, Integer capacidad, Estado estado, String abasto, Clasificacion clasificacion,
             Integer compartiminetos, Forma forma) {
         super(id, capacidad, estado, abasto);
         this.clasificacion = clasificacion;
@@ -54,9 +54,9 @@ public class Cisterna extends Deposito implements MostrarInformacion {
     @Override
     public String mostrarInformacion() {
         if (clasificacion.equals(Clasificacion.Simple)) {
-            return "Cinsterna " + clasificacion + ": " + "\nID: " + id + "\nCapacidad: " + capacidad + "\nEstado: " + estado + "\nTipo de abasto: " + abasto + "\nForma: " + forma + "\n";
+            return "Cinsterna " + clasificacion + ": " + "\nID: " + id + "\nCapacidad: " + capacidad + "L\nEstado: " + estado + "\nTipo de abasto: " + abasto + "\nForma: " + forma + "\n";
         } else {
-            return "Cinsterna " + clasificacion + ": " + "\nID: " + id + "\nCapacidad: " + capacidad + "\nEstado: " + estado + "\nTipo de abasto: " + abasto +  "\nCompartiminetos: " + compartiminetos + "\n";
+            return "Cinsterna " + clasificacion + ": " + "\nID: " + id + "\nCapacidad: " + capacidad + "L\nEstado: " + estado + "\nTipo de abasto: " + abasto +  "\nCompartiminetos: " + compartiminetos + "\n";
         }
     }
 

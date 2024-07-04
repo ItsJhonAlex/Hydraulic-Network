@@ -3,18 +3,25 @@ package com.network.data.deposito;
 import com.network.enums.Estado;
 
 public abstract class Deposito{
-    protected Integer id;
+    protected String id;
     protected Integer capacidad;
     protected Estado estado;
     protected String abasto;
     
-    public Deposito(Integer id, Integer capacidad, Estado estado, String abasto) {
+    public Deposito(String id, Integer capacidad, Estado estado, String abasto) {
         this.id = id;
         this.capacidad = capacidad;
         this.estado = estado;
         this.abasto = abasto;
     }
+    public String getId() {
+        return id;
+    }
 
+    public void setId(String id){
+        this.id = id;
+    }
+    
     public Integer getCapacidad() {
         return capacidad;
     }

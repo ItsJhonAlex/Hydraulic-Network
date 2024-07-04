@@ -6,8 +6,8 @@ import com.network.interfaces.MostrarInformacion;
 public class Bomba extends Bombeo implements MostrarInformacion{
     private Integer tiempo;
 
-    public Bomba(Estado estado, String regimen, Integer tiempo) {
-        super(estado, regimen);
+    public Bomba(String id, Estado estado, String regimen, Integer tiempo) {
+        super(id, estado, regimen);
         this.tiempo = tiempo;
     }
 
@@ -21,6 +21,6 @@ public class Bomba extends Bombeo implements MostrarInformacion{
 
     @Override
     public String mostrarInformacion() {
-        return "Bombas de Agua" + "\nEstado: " + estado + "\nRegimen: " + regimen + "\nTiempo de bombeo: " + tiempo;
+        return "Bombas de Agua" + "\nID: " + id + "\nEstado: " + estado + "\nRegimen: " + regimen + "\nTiempo de bombeo: " + tiempo + "m\n";
     }
 }

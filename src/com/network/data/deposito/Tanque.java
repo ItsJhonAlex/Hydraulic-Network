@@ -7,7 +7,7 @@ import com.network.interfaces.MostrarInformacion;
 public class Tanque extends Deposito implements MostrarInformacion{
     private Material material;
 
-    public Tanque(Integer id, Integer capacidad, Estado estado, String abasto, Material material) {
+    public Tanque(String id, Integer capacidad, Estado estado, String abasto, Material material) {
         super(id, capacidad, estado, abasto);
         this.material = material;
     }
@@ -22,6 +22,6 @@ public class Tanque extends Deposito implements MostrarInformacion{
 
     @Override
     public String mostrarInformacion() {
-        return "Tanque:" + "\nID: " + id + "\nCapacidad: " + capacidad + "\nEstado: " + estado + "\nTipo de Abasto: " + abasto + "\nMaterial: " + material + "\n"; 
+        return "Tanque:" + "\nID: " + id + "\nCapacidad: " + capacidad + "L\nEstado: " + estado + "\nTipo de Abasto: " + abasto + "\nMaterial: " + material + "\n"; 
     }
 }
