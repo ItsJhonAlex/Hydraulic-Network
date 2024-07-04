@@ -2,8 +2,9 @@ package com.network.data.deposito;
 
 import com.network.enums.Estado;
 import com.network.enums.Material;
+import com.network.interfaces.MostrarInformacion;
 
-public class Tanque extends Deposito {
+public class Tanque extends Deposito implements MostrarInformacion{
     private Material material;
 
     public Tanque(Integer id, Integer capacidad, Estado estado, String abasto, Material material) {
@@ -20,9 +21,7 @@ public class Tanque extends Deposito {
     }
 
     @Override
-    public String toString() {
-        return "Deposito Tanque" + "\nID: " + id + "\nCapacidad: " + capacidad + "\nEstado: " + estado + "\nTipo de Abasto: " + abasto + "Material: " + material; 
+    public String mostrarInformacion() {
+        return "Tanque:" + "\nID: " + id + "\nCapacidad: " + capacidad + "\nEstado: " + estado + "\nTipo de Abasto: " + abasto + "\nMaterial: " + material + "\n"; 
     }
-
-    
 }

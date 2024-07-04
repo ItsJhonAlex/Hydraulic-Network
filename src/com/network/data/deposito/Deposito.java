@@ -2,7 +2,7 @@ package com.network.data.deposito;
 
 import com.network.enums.Estado;
 
-public class Deposito {
+public abstract class Deposito{
     protected Integer id;
     protected Integer capacidad;
     protected Estado estado;
@@ -39,10 +39,6 @@ public class Deposito {
         this.abasto = abasto;
     }
 
-    @Override
-    public String toString() {
-        return "deposito [capacidad=" + capacidad + ", estado=" + estado + ", abasto=" + abasto + "]";
-    }
-
     
+    public abstract String mostrarInformacion();
 }

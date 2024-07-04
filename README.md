@@ -1,8 +1,6 @@
 # Proyecto #34 Red Hidráulica
 
-## Autor: Jonathan Alejandro
-
-## Fecha: 4/07/2024
+## Autor: [Jonathan A. Rodriguez](https://github.com/ItsJhonAlex)
 
 ## Descripción: Programa que realiza el control de la Red Hidráulica de una instalación
 
