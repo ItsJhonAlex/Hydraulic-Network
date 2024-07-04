@@ -1,0 +1,21 @@
+Tanque:
+ID: 1
+Capacidad: 50
+Estado: Bien
+Tipo de Abasto: Directo
+Material: Fibrocemento
+
+Cinsterna Simple: 
+ID: 2
+Capacidad: 100
+Estado: Bien
+Tipo de abasto: Gravedad
+Forma: Cilindrica
+
+Cinsterna Compuesta: 
+ID: 3
+Capacidad: 150
+Estado: Mal
+Tipo de abasto: Presion
+Compartiminetos: 6
+
