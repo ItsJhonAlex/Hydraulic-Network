@@ -1,5 +1,6 @@
 package com.network.data.deposito;
 
+import com.network.enums.Abasto;
 import com.network.enums.Clasificacion;
 import com.network.enums.Estado;
 import com.network.enums.Forma;
@@ -10,7 +11,7 @@ public class Cisterna extends Deposito implements MostrarInformacion {
     private Integer compartiminetos;
     private Forma forma;
     
-    public Cisterna(String id, Integer capacidad, Estado estado, String abasto, Clasificacion clasificacion,
+    public Cisterna(String id, Integer capacidad, Estado estado, Abasto abasto, Clasificacion clasificacion,
             Integer compartiminetos, Forma forma) {
         super(id, capacidad, estado, abasto);
         this.clasificacion = clasificacion;

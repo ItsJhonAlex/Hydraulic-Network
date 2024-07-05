@@ -1,63 +1,21 @@
 Cinsterna Simple: 
-ID: 009
-Capacidad: 100L
-Estado: Regular
-Tipo de abasto: Gravedad
-Forma: Cilindrica
-
-Cinsterna Simple: 
-ID: 011
-Capacidad: 100L
-Estado: Regular
-Tipo de abasto: Gravedad
-Forma: Cilindrica
-
-Cinsterna Simple: 
-ID: 013
-Capacidad: 100L
-Estado: Regular
-Tipo de abasto: Gravedad
-Forma: Cilindrica
-
-Cinsterna Simple: 
-ID: 014
-Capacidad: 100L
-Estado: Regular
-Tipo de abasto: Gravedad
-Forma: Cilindrica
-
-Cinsterna Simple: 
 ID: 015
 Capacidad: 100L
 Estado: Regular
-Tipo de abasto: Gravedad
+Tipo de abasto: Manantial
 Forma: Cilindrica
 
 Cinsterna Compuesta: 
 ID: 007
 Capacidad: 100L
 Estado: Regular
-Tipo de abasto: Gravedad
+Tipo de abasto: Manantial
 Compartiminetos: 2
 
 Cinsterna Compuesta: 
 ID: 008
 Capacidad: 150L
 Estado: Mal
-Tipo de abasto: Presion
+Tipo de abasto: Manantial
 Compartiminetos: 6
-
-Cinsterna Compuesta: 
-ID: 010
-Capacidad: 100L
-Estado: Regular
-Tipo de abasto: Gravedad
-Compartiminetos: 2
-
-Cinsterna Compuesta: 
-ID: 012
-Capacidad: 100L
-Estado: Regular
-Tipo de abasto: Gravedad
-Compartiminetos: 2
 

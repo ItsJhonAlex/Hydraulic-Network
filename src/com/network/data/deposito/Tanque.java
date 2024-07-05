@@ -1,5 +1,6 @@
 package com.network.data.deposito;
 
+import com.network.enums.Abasto;
 import com.network.enums.Estado;
 import com.network.enums.Material;
 import com.network.interfaces.MostrarInformacion;
@@ -7,7 +8,7 @@ import com.network.interfaces.MostrarInformacion;
 public class Tanque extends Deposito implements MostrarInformacion{
     private Material material;
 
-    public Tanque(String id, Integer capacidad, Estado estado, String abasto, Material material) {
+    public Tanque(String id, Integer capacidad, Estado estado, Abasto abasto, Material material) {
         super(id, capacidad, estado, abasto);
         this.material = material;
     }
