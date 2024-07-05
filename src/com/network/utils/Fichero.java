@@ -30,19 +30,22 @@ public class Fichero {
         }
     }
 
-    public static void guardarCapacidadCisternas(Network network, int cantidadCompartimentos, Forma formaEspecifica, String nombreArchivo) {
-        // Calcular la capacidad total de las cisternas
-        String resultado = network.calcularCapacidadTotalCisternas(cantidadCompartimentos, formaEspecifica);
+    public static void guardarInformacionCisternas(Network network, Forma formaEspecifica, int cantidadCompartimentos, String nombreArchivo) {
+        double capacidadSimples = network.calcularCapacidadCisternasSimples(formaEspecifica);
+        double capacidadCompuestas = network.calcularCapacidadCisternasCompuestas(cantidadCompartimentos);
+        double capacidadTotal = network.calcularCapacidadCisternasSimples(formaEspecifica) + network.calcularCapacidadCisternasCompuestas(cantidadCompartimentos);
 
-        // Guardar el resultado en un archivo
-        guardarEnArchivo(resultado, nombreArchivo);
+        String informacion = "Capacidad total de Cisternas Simples: " + capacidadSimples + "L\n" +
+                            "Cantidad total de Cisternas Compuestas: " + capacidadCompuestas + "L\n" + 
+                            "Capacidad total de Cisternas: " + capacidadTotal + "L\n";
+
+        guardarEnArchivo(informacion, nombreArchivo);
     }
 
     private static void guardarEnArchivo(String texto, String nombreArchivo) {
         try (PrintWriter out = new PrintWriter(new FileWriter(nombreArchivo))) {
             out.println(texto);
         } catch (IOException e) {
-            e.printStackTrace();
             System.out.println("Error al guardar el archivo: " + e.getMessage());
         }
     }

@@ -2,7 +2,8 @@ package com.network.main;
 
 import java.io.IOException;
 
-import com.network.data.deposito.Cisterna;
+import com.network.data.deposito.CisternaCompuesta;
+import com.network.data.deposito.CisternaSimple;
 import com.network.data.deposito.Tanque;
 import com.network.data.turbinas.Bomba;
 import com.network.data.turbinas.Turbina;
@@ -25,15 +26,15 @@ public class Main {
         network.agregarDeposito(new Tanque("004", 50, Estado.Bien, Abasto.Reciclada, Material.Plastico));
         network.agregarDeposito(new Tanque("005", 50, Estado.Bien, Abasto.Reciclada, Material.Metal));
         network.agregarDeposito(new Tanque("006", 50, Estado.Bien, Abasto.Municipal, Material.Fibrocemento));
-        network.agregarDeposito(new Cisterna("007", 100, Estado.Regular, Abasto.Manantial, Clasificacion.Compuesta, 2, Forma.Cilindrica));
-        network.agregarDeposito(new Cisterna("008", 150, Estado.Mal, Abasto.Manantial, Clasificacion.Compuesta, 6, Forma.Cilindrica));
-        network.agregarDeposito(new Cisterna("009", 100, Estado.Regular, Abasto.Reciclada, Clasificacion.Simple, 2, Forma.Cilindrica));
-        network.agregarDeposito(new Cisterna("010", 100, Estado.Regular, Abasto.Desalinizado, Clasificacion.Compuesta, 2, Forma.Cilindrica));
-        network.agregarDeposito(new Cisterna("011", 100, Estado.Regular, Abasto.Municipal, Clasificacion.Simple, 2, Forma.Cilindrica));
-        network.agregarDeposito(new Cisterna("012", 100, Estado.Regular, Abasto.Reciclada, Clasificacion.Compuesta, 2, Forma.Cilindrica));
-        network.agregarDeposito(new Cisterna("013", 100, Estado.Regular, Abasto.Desalinizado, Clasificacion.Simple, 2, Forma.Cilindrica));
-        network.agregarDeposito(new Cisterna("014", 100, Estado.Regular, Abasto.Municipal, Clasificacion.Simple, 2, Forma.Cilindrica));
-        network.agregarDeposito(new Cisterna("015", 100, Estado.Regular, Abasto.Manantial, Clasificacion.Simple, 2, Forma.Cilindrica));
+        network.agregarDeposito(new CisternaCompuesta("007", 100, Estado.Regular, Abasto.Manantial, Clasificacion.Compuesta, 2));
+        network.agregarDeposito(new CisternaCompuesta("008", 150, Estado.Mal, Abasto.Manantial, Clasificacion.Compuesta, 6));
+        network.agregarDeposito(new CisternaSimple("009", 100, Estado.Regular, Abasto.Reciclada, Clasificacion.Simple, Forma.Cilindrica));
+        network.agregarDeposito(new CisternaCompuesta("010", 100, Estado.Regular, Abasto.Desalinizado, Clasificacion.Compuesta, 2));
+        network.agregarDeposito(new CisternaSimple("011", 100, Estado.Regular, Abasto.Municipal, Clasificacion.Simple, Forma.Cilindrica));
+        network.agregarDeposito(new CisternaCompuesta("012", 100, Estado.Regular, Abasto.Reciclada, Clasificacion.Compuesta, 2));
+        network.agregarDeposito(new CisternaSimple("013", 100, Estado.Regular, Abasto.Desalinizado, Clasificacion.Simple, Forma.Cilindrica));
+        network.agregarDeposito(new CisternaSimple("014", 100, Estado.Regular, Abasto.Municipal, Clasificacion.Simple, Forma.Cilindrica));
+        network.agregarDeposito(new CisternaSimple("015", 100, Estado.Regular, Abasto.Manantial, Clasificacion.Simple, Forma.Cilindrica));
 
         //Bombas
         network.agrearBombeo(new Bomba("001", Estado.Bien, "Alto", 10));
@@ -48,6 +49,6 @@ public class Main {
         network.mostrarTiempoPromedioBombeoBuenEstado();
         network.mostrarEstadoTurbinaMayorFuerza();
         Fichero.guardarInformacionEstado(network, "verificar.dat", Abasto.Manantial);
-        Fichero.guardarCapacidadCisternas(network, 2, Forma.Cilindrica, "cisternas.dat");
+        Fichero.guardarInformacionCisternas(network, Forma.Cilindrica, 2, "cisternas.dat");
     }
 }

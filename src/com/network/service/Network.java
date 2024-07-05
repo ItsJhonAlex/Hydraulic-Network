@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 
 import com.network.data.deposito.Cisterna;
+import com.network.data.deposito.CisternaCompuesta;
+import com.network.data.deposito.CisternaSimple;
 import com.network.data.deposito.Deposito;
 import com.network.data.deposito.Tanque;
 import com.network.data.turbinas.Bombeo;
@@ -262,20 +264,30 @@ public class Network {
     }
 
     //Respondiendo la septima funcion del proyecto (Pendiente de Cambios)
-        public String calcularCapacidadTotalCisternas(int cantidadCompartimentos, Forma formaEspecifica) {
+    public double calcularCapacidadCisternasSimples(Forma formaEspecifica) {
         double capacidadTotal = 0;
-
         for (Deposito deposito : depositos) {
-            if (deposito instanceof Cisterna) {
-                Cisterna cisterna = (Cisterna) deposito;
-                if (cisterna.getCompartiminetos() == cantidadCompartimentos || cisterna.getForma() == formaEspecifica) {
-                    capacidadTotal += cisterna.getCapacidad();
+            if (deposito instanceof CisternaSimple) {
+                CisternaSimple simple = (CisternaSimple) deposito;
+                if (simple.getForma() == formaEspecifica) {
+                    capacidadTotal += simple.getCapacidad();
                 }
             }
         }
-
-        return "Capacidad total: " + capacidadTotal + " litros";
+        return capacidadTotal;
     }
 
+    public double calcularCapacidadCisternasCompuestas(int cantidadCompartimentos) {
+        int cantidadTotal = 0;
+        for (Deposito deposito : depositos) {
+            if (deposito instanceof CisternaCompuesta) {
+                CisternaCompuesta compuesta = (CisternaCompuesta) deposito;
+                if (compuesta.getCompartimentos() == cantidadCompartimentos) {
+                    cantidadTotal += compuesta.getCapacidad();
+                }
+            }
+        }
+        return cantidadTotal;
+    }
 }
 
