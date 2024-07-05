@@ -263,7 +263,7 @@ public class Network {
         }
     }
 
-    //Respondiendo la septima funcion del proyecto (Pendiente de Cambios)
+    //Respondiendo la septima funcion del proyecto (Funciona Correctamente)
     public double calcularCapacidadCisternasSimples(Forma formaEspecifica) {
         double capacidadTotal = 0;
         for (Deposito deposito : depositos) {
