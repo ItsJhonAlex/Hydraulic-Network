@@ -37,11 +37,21 @@ public class Main {
         network.agregarDeposito(new CisternaSimple("015", 100, Estado.Regular, Abasto.Manantial, Clasificacion.Simple, Forma.Cilindrica));
 
         //Bombas
-        network.agrearBombeo(new Bomba("001", Estado.Bien, "Alto", 10));
-        network.agrearBombeo(new Turbina("002", Estado.Bien, "Bajo", 25));
+        network.agrearBombeo(new Bomba("001", Estado.Bien, "Alto", 15));
+        network.agrearBombeo(new Bomba("002", Estado.Regular, "Alto", 16));
+        network.agrearBombeo(new Bomba("003", Estado.Mal, "Alto", 30));
+        network.agrearBombeo(new Bomba("004", Estado.Bien, "Alto", 40));
+        network.agrearBombeo(new Bomba("005", Estado.Bien, "Alto", 50));
+        network.agrearBombeo(new Turbina("006", Estado.Regular, "Bajo", 10));
+        network.agrearBombeo(new Turbina("007", Estado.Bien, "Bajo", 20));
+        network.agrearBombeo(new Turbina("008", Estado.Mal, "Bajo", 15));
+        network.agrearBombeo(new Turbina("009", Estado.Bien, "Bajo", 35));
+        network.agrearBombeo(new Turbina("010", Estado.Bien, "Bajo", 25));
+
 
 
         //Metodos
+        network.informaciónEstado(Abasto.Desalinizado);
         network.mostrarTanquesPorMaterial();
         network.mostrarCisternasPorClasificacion();
         network.mostrarCantidades();
